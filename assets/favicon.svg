@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FOMO">
+  <defs>
+    <linearGradient id="outer" x1="10" y1="6" x2="54" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFC15E"/>
+      <stop offset="1" stop-color="#FF6B3D"/>
+    </linearGradient>
+    <linearGradient id="inner" x1="24" y1="20" x2="40" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E7C2FF"/>
+      <stop offset="1" stop-color="#9A5CE0"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="#150F23"/>
+  <path fill="url(#outer)" d="M32 5c-8 11-15 19-15 31 0 12 7 21 15 21s15-9 15-21c0-7-3-13-8-20 0 7-3 12-7 12s-6-5-4-11c-3 3-6 8-6 14 0-9 5-16 10-26z"/>
+  <path fill="url(#inner)" opacity="0.92" d="M31 30c-4 6-6 10-6 15 0 6 3 10 7 10s7-4 7-10c0-3-1-6-3-9 0 3-2 5-4 5s-3-2-2-5c-1 1-2 3-2 5 0-4 1-7 3-11z"/>
+</svg>
