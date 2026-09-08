@@ -181,15 +181,6 @@
     padding:7px 16px;border-radius:999px;font-size:.78rem;letter-spacing:.06em;
     color:var(--accent-2);font-weight:600;margin-bottom:28px;
   }
-  .wordmark{
-    font-family:'Space Grotesk';font-weight:700;
-    font-size:clamp(3.2rem,11vw,6.2rem);
-    line-height:1;letter-spacing:-.02em;
-    background:linear-gradient(135deg,var(--accent),var(--accent-2));
-    -webkit-background-clip:text;background-clip:text;color:transparent;
-    display:inline-flex;align-items:center;gap:14px;margin-bottom:18px;
-  }
-  .wordmark img{width:.85em;height:.85em;}
   h1{font-size:clamp(1.7rem,3.6vw,2.5rem);max-width:22ch;margin:0 auto 18px;}
   h1 .fx{background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent;}
   .hero p.lead{color:var(--text-muted);font-size:1.06rem;max-width:56ch;margin:0 auto 32px;}
@@ -276,7 +267,8 @@
   footer .foot-links a{text-decoration:none;}
   footer .foot-links a:hover{color:var(--text);}
 
-  table.fee-table{width:100%;border-collapse:collapse;font-size:.92rem;}
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -4px;}
+  table.fee-table{width:100%;border-collapse:collapse;font-size:.92rem;min-width:520px;}
   table.fee-table th,table.fee-table td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--surface-line);}
   table.fee-table th{color:var(--text-muted);font-weight:600;font-size:.82rem;text-transform:none;}
 
@@ -285,8 +277,35 @@
     .grid-2{grid-template-columns:1fr;}
     nav.top-nav{display:none;}
     .cta-band{padding:30px 22px;}
-    .hero{padding:56px 0 40px;}
+    .hero{padding:44px 0 36px;}
+    .hero::before{width:600px;height:360px;top:-100px;}
+    section{padding:44px 0;}
   }
+
+  @media (max-width:600px){
+    .wrap{padding:0 18px;}
+    .topbar{padding:12px 0;}
+    .brand{font-size:1rem;}
+    .brand img{width:26px;height:26px;}
+    .kicker-badge{font-size:.68rem;padding:6px 12px;margin-bottom:20px;white-space:normal;text-align:center;}
+    h1{font-size:1.55rem;max-width:none;}
+    .hero p.lead{font-size:.96rem;margin-bottom:26px;}
+    .hero-ctas{flex-direction:column;width:100%;margin-bottom:20px;}
+    .hero-ctas .btn{width:100%;}
+    .check-row{flex-direction:column;gap:10px;align-items:center;margin-bottom:24px;}
+    .ref-pill{flex-direction:column;padding:16px;gap:10px;width:100%;}
+    .ref-pill .code{font-size:1.35rem;}
+    .copy-btn{width:100%;justify-content:center;}
+    .discount-tag{order:3;}
+    .feed-mock{margin-top:36px;padding:14px;}
+    .feed-card{padding:10px 12px;gap:10px;}
+    .steps li{padding:18px 0 18px 46px;}
+    .steps li::before{width:32px;height:32px;font-size:.88rem;top:16px;}
+    .cta-band h2{font-size:1.35rem;}
+    .card{padding:18px;}
+    section{padding:36px 0;}
+  }
+
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
   }
@@ -297,7 +316,7 @@
 
 <header class="top">
   <div class="wrap topbar">
-    <a href="/" class="brand"><img src="assets/favicon.svg" alt="" width="30" height="30"> FomoApp.Trade</a>
+    <a href="/" class="brand"><img src="assets/favicon.svg" alt="" width="30" height="30"> Fomo Trading</a>
     <nav class="top-nav" aria-label="Primary">
       <a href="#download">Download</a>
       <a href="#how-it-works">How It Works</a>
@@ -314,8 +333,6 @@
     <div class="wrap hero-inner">
       <span class="kicker-badge">SOCIAL CRYPTO TRADING APP · INDEPENDENT GUIDE</span>
 
-      <div class="wordmark"><img src="assets/favicon.svg" alt=""> fomo</div>
-
       <h1>Fomo Trading App: <span class="fx">Trade Memecoins</span> on Solana, Base, BNB & Robinhood Chain</h1>
 
       <p class="lead">Fomo shows you what the best onchain traders are buying, the moment they buy it. Follow a wallet, get the alert, tap once and you're in. Funding comes in through Apple Pay — no gas to manage, no seed phrase to lose.</p>
@@ -325,7 +342,7 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.36 1.43c.09 1.1-.34 2.16-1.04 2.93-.72.78-1.9 1.4-3.02 1.31-.11-1.06.4-2.17 1.06-2.9.73-.8 2-1.39 3-1.34zM19.7 17.02c-.35.81-.52 1.17-.97 1.9-.63 1.02-1.52 2.28-2.62 2.29-.98.01-1.23-.64-2.56-.63-1.33 0-1.6.64-2.58.66-1.1.02-1.94-1.16-2.57-2.17-1.76-2.82-1.94-6.14-.86-7.9.77-1.25 1.98-1.98 3.12-1.98 1.16 0 1.89.65 2.85.65.93 0 1.5-.65 2.85-.65.99 0 2.05.55 2.79 1.5-2.46 1.35-2.06 4.86.55 5.83z"/></svg>
           App Store
         </a>
-        <a class="btn btn-dark" href="https://play.google.com/store/search?q=fomo%20never%20miss%20out&c=apps" target="_blank" rel="noopener">
+        <a class="btn btn-dark" href="https://play.google.com/store/apps/details?id=family.fomo.app" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.2c-.4.3-.6.8-.6 1.4v17c0 .6.2 1.1.6 1.4l.1.1L13.6 12v-.1L3.7 2.1l-.1.1z"/><path d="M17 8.7l-3-1.8-3.3 3.3 3.3 3.3 3.1-1.8c.9-.5.9-2.5-.1-3z" opacity=".7"/></svg>
           Google Play
         </a>
@@ -454,16 +471,18 @@
         <h2>Fomo trading fees and the affiliate program</h2>
       </div>
 
-      <table class="fee-table">
-        <thead><tr><th>Item</th><th>Published detail</th></tr></thead>
-        <tbody>
-          <tr><td>Spot trading fee</td><td>~0.45% per trade, gas included</td></tr>
-          <tr><td>Referral code discount</td><td>Roughly 10% off trading fees (per third-party sources — confirm in-app)</td></tr>
-          <tr><td>Supported chains</td><td>Solana, Base, BNB Chain, and others</td></tr>
-          <tr><td>Deposit methods</td><td>Apple Pay, card, bank transfer, existing crypto wallet</td></tr>
-          <tr><td>Affiliate program</td><td>Silver / Gold / Platinum tiers, commission on qualified trades, uncapped earnings, application required</td></tr>
-        </tbody>
-      </table>
+      <div class="table-scroll">
+        <table class="fee-table">
+          <thead><tr><th>Item</th><th>Published detail</th></tr></thead>
+          <tbody>
+            <tr><td>Spot trading fee</td><td>~0.45% per trade, gas included</td></tr>
+            <tr><td>Referral code discount</td><td>Roughly 10% off trading fees (per third-party sources — confirm in-app)</td></tr>
+            <tr><td>Supported chains</td><td>Solana, Base, BNB Chain, and others</td></tr>
+            <tr><td>Deposit methods</td><td>Apple Pay, card, bank transfer, existing crypto wallet</td></tr>
+            <tr><td>Affiliate program</td><td>Silver / Gold / Platinum tiers, commission on qualified trades, uncapped earnings, application required</td></tr>
+          </tbody>
+        </table>
+      </div>
       <div class="callout">
         Fomo has not officially published its affiliate commission percentage. Some third-party sites estimate figures as high as 25%, but that number is <strong>unverified</strong> and may change by tier or over time.
       </div>
