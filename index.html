@@ -233,6 +233,83 @@
   .card h3{font-size:1.05rem;margin-bottom:8px;}
   .card p{color:var(--text-muted);font-size:.93rem;margin:0;}
 
+  /* feature bento */
+  .feat-bento{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;}
+  .feat-tile{background:var(--surface);border:1px solid var(--surface-line);border-radius:18px;padding:26px;display:flex;flex-direction:column;}
+  .feat-tag{display:inline-flex;align-items:center;gap:7px;font-size:.82rem;color:var(--text-muted);font-weight:600;margin-bottom:10px;}
+  .feat-tag i{width:6px;height:6px;border-radius:50%;background:var(--accent-2);flex-shrink:0;}
+  .feat-tile h3{font-family:'Space Grotesk';font-size:1.2rem;font-weight:600;margin:0 0 6px;line-height:1.3;max-width:32ch;}
+  .feat-tile .feat-sub{color:var(--text-muted);font-size:.86rem;margin:0 0 18px;max-width:38ch;}
+  .feat-tile .feat-visual{margin-top:auto;}
+
+  .t-feed{grid-column:span 7;}
+  .t-leaderboard{grid-column:span 5;}
+  .t-alerts{grid-column:span 4;}
+  .t-onboarding{grid-column:span 4;}
+  .t-multichain{grid-column:span 4;}
+  .t-buy{grid-column:span 12;flex-direction:row;align-items:center;gap:36px;}
+  .t-buy .feat-copy{flex:1;}
+  .t-buy .feat-visual{margin-top:0;flex:1;max-width:360px;}
+
+  /* live feed tile */
+  .feed-list{display:flex;flex-direction:column;gap:10px;}
+  .feed-item{display:flex;align-items:center;gap:12px;padding:12px;background:var(--bg-alt);border:1px solid var(--surface-line);border-radius:12px;}
+  .fi-avatar{width:34px;height:34px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk';font-weight:700;font-size:.82rem;color:#150F23;}
+  .fi-body{flex:1;min-width:0;}
+  .fi-top{display:flex;align-items:center;gap:8px;font-size:.84rem;margin-bottom:2px;}
+  .fi-top b{font-weight:600;}
+  .fi-tag{font-size:.62rem;font-weight:700;padding:2px 7px;border-radius:5px;}
+  .fi-tag.buy{background:rgba(124,224,164,.15);color:#7CE0A4;}
+  .fi-tag.sell{background:rgba(255,138,138,.15);color:#FF8A8A;}
+  .fi-sub{font-family:'Space Grotesk';font-size:.78rem;color:var(--text-muted);}
+  .fi-sub b{color:var(--text);font-weight:600;}
+  .fi-mc{margin-left:auto;text-align:right;font-family:'Space Grotesk';font-size:.8rem;font-weight:700;flex-shrink:0;}
+
+  /* leaderboard tile */
+  .lb-list{display:flex;flex-direction:column;}
+  .lb-row{display:flex;align-items:center;gap:11px;padding:10px 0;border-bottom:1px solid var(--surface-line);}
+  .lb-row:last-child{border-bottom:none;}
+  .lb-rank{width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk';font-weight:700;font-size:.74rem;color:var(--text-muted);background:var(--bg-alt);flex-shrink:0;}
+  .lb-row:nth-child(1) .lb-rank{background:rgba(255,209,102,.16);color:#FFD166;}
+  .lb-row:nth-child(2) .lb-rank{background:rgba(216,210,232,.14);color:#D8D2E8;}
+  .lb-row:nth-child(3) .lb-rank{background:rgba(224,165,111,.16);color:#E0A56F;}
+  .lb-avatar{width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk';font-weight:700;font-size:.76rem;color:#150F23;}
+  .lb-user{flex:1;min-width:0;font-size:.86rem;font-weight:600;}
+  .lb-pnl{font-family:'Space Grotesk';font-weight:700;font-size:.82rem;color:#7CE0A4;flex-shrink:0;}
+  .lb-row.faded{opacity:.42;}
+
+  /* alerts tile */
+  .toast-stack{position:relative;height:96px;}
+  .toast{position:absolute;left:0;right:0;display:flex;align-items:center;gap:11px;background:var(--bg-alt);border:1px solid var(--surface-line);border-radius:13px;padding:12px;}
+  .toast.back{top:0;transform:scale(.94);opacity:.5;}
+  .toast.front{top:22px;box-shadow:0 12px 24px -8px rgba(0,0,0,.4);}
+  .toast-icon{width:32px;height:32px;border-radius:9px;flex-shrink:0;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-size:.9rem;}
+  .toast .t-title{font-size:.85rem;font-weight:700;}
+  .toast .t-sub{font-size:.74rem;color:var(--text-muted);}
+
+  /* onboarding tile */
+  .oauth-stack{display:flex;flex-direction:column;gap:10px;}
+  .oauth-btn{display:flex;align-items:center;justify-content:center;gap:9px;padding:12px;border-radius:11px;font-size:.87rem;font-weight:600;}
+  .oauth-btn.apple{background:var(--text);color:#150F23;}
+  .oauth-btn.google{background:var(--bg);border:1px solid var(--surface-line);color:var(--text);}
+  .oauth-btn svg{width:16px;height:16px;}
+
+  /* multichain tile */
+  .chain-stack{display:flex;flex-direction:column;gap:8px;}
+  .chain-row{display:flex;align-items:center;gap:10px;padding:9px 11px;background:var(--bg-alt);border:1px solid var(--surface-line);border-radius:10px;}
+  .chain-dot{width:22px;height:22px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.62rem;font-weight:700;color:#150F23;}
+  .chain-row span{font-size:.82rem;font-weight:600;}
+  .chain-row small{margin-left:auto;font-family:'Space Grotesk';font-size:.72rem;color:var(--text-muted);font-weight:600;}
+
+  /* buy tile */
+  .buy-widget{background:var(--bg-alt);border:1px solid var(--surface-line);border-radius:16px;padding:20px;}
+  .buy-amount{font-family:'Space Grotesk';font-size:1.9rem;font-weight:700;text-align:center;margin-bottom:14px;}
+  .amt-row{display:flex;gap:8px;margin-bottom:16px;}
+  .amt-chip{flex:1;text-align:center;font-size:.78rem;font-weight:600;padding:8px 4px;border-radius:9px;background:var(--surface);border:1px solid var(--surface-line);color:var(--text-muted);}
+  .amt-chip.active{background:var(--accent);color:#150F23;border-color:transparent;}
+  .pay-btn{display:flex;align-items:center;justify-content:center;gap:6px;background:var(--text);color:#150F23;text-align:center;padding:12px;border-radius:11px;font-size:.88rem;font-weight:700;}
+  .pay-btn svg{width:15px;height:15px;}
+
   .steps{counter-reset:step;list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0;}
   .steps li{counter-increment:step;position:relative;padding:22px 0 22px 58px;border-bottom:1px solid var(--surface-line);}
   .steps li:last-child{border-bottom:none;}
@@ -275,6 +352,10 @@
   @media (max-width:860px){
     .grid-3{grid-template-columns:1fr;}
     .grid-2{grid-template-columns:1fr;}
+    .feat-bento{grid-template-columns:1fr 1fr;}
+    .t-feed,.t-leaderboard,.t-alerts,.t-onboarding,.t-multichain{grid-column:span 2;}
+    .t-buy{flex-direction:column;align-items:stretch;gap:20px;}
+    .t-buy .feat-visual{max-width:none;}
     nav.top-nav{display:none;}
     .cta-band{padding:30px 22px;}
     .hero{padding:44px 0 36px;}
@@ -303,6 +384,8 @@
     .steps li::before{width:32px;height:32px;font-size:.88rem;top:16px;}
     .cta-band h2{font-size:1.35rem;}
     .card{padding:18px;}
+    .feat-bento{grid-template-columns:1fr;}
+    .t-feed,.t-leaderboard,.t-alerts,.t-onboarding,.t-multichain,.t-buy{grid-column:span 1;}
     section{padding:36px 0;}
   }
 
@@ -319,6 +402,7 @@
     <a href="/" class="brand"><img src="assets/favicon.svg" alt="" width="30" height="30"> Fomo Trading</a>
     <nav class="top-nav" aria-label="Primary">
       <a href="#download">Download</a>
+      <a href="#features">Features</a>
       <a href="#how-it-works">How It Works</a>
       <a href="#fees">Fees</a>
       <a href="#faq">FAQ</a>
@@ -370,6 +454,128 @@
         <div class="feed-card"><div class="feed-avatar"></div><div class="feed-body"><div class="name">@degen_trader</div><div class="meta">bought $POPCAT · Solana</div></div><div class="feed-pct up">+18.2%</div></div>
         <div class="feed-card"><div class="feed-avatar"></div><div class="feed-body"><div class="name">@base_whale</div><div class="meta">bought $TOSHI · Base</div></div><div class="feed-pct up">+6.4%</div></div>
         <div class="feed-card"><div class="feed-avatar"></div><div class="feed-body"><div class="name">@fomo_fam_02</div><div class="meta">sold $WOJAK · Solana</div></div><div class="feed-pct down">-3.1%</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow-tag">Inside the app</span>
+        <h2>What you're actually signing up for</h2>
+        <p>A look at the core screens before you download anything — who's trading, what they're buying, and how you follow along.</p>
+      </div>
+
+      <div class="feat-bento">
+
+        <div class="feat-tile t-feed">
+          <span class="feat-tag"><i></i>Live feed</span>
+          <h3>See every buy and sell as it happens</h3>
+          <p class="feat-sub">Follow specific wallets or browse the public feed — every trade posts with the token, size, and market cap.</p>
+          <div class="feat-visual">
+            <div class="feed-list">
+              <div class="feed-item">
+                <div class="fi-avatar" style="background:linear-gradient(135deg,#FF8A50,#B86EE6);">N</div>
+                <div class="fi-body">
+                  <div class="fi-top"><b>@nova_finds</b><span class="fi-tag buy">BUY</span></div>
+                  <div class="fi-sub"><b>$POPCAT</b> · Solana</div>
+                </div>
+                <div class="fi-mc">$34.3K<br><span style="color:var(--text-muted);font-weight:600;">$642M mc</span></div>
+              </div>
+              <div class="feed-item">
+                <div class="fi-avatar" style="background:linear-gradient(135deg,#5CA5FF,#0052FF);">D</div>
+                <div class="fi-body">
+                  <div class="fi-top"><b>@driftking</b><span class="fi-tag sell">SELL</span></div>
+                  <div class="fi-sub"><b>$WOJAK</b> · Base</div>
+                </div>
+                <div class="fi-mc">$4.5K<br><span style="color:var(--text-muted);font-weight:600;">$41.5B mc</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feat-tile t-leaderboard">
+          <span class="feat-tag"><i></i>Leaderboard</span>
+          <h3>Weekly rankings by realized P&amp;L</h3>
+          <p class="feat-sub">Top traders earn a badge and visibility — it's the fastest way to find who to follow next.</p>
+          <div class="feat-visual">
+            <div class="lb-list">
+              <div class="lb-row"><span class="lb-rank">1</span><span class="lb-avatar" style="background:linear-gradient(135deg,#FF8A50,#B86EE6);">W</span><div class="lb-user">@wave_trader</div><span class="lb-pnl">+$842.1K</span></div>
+              <div class="lb-row"><span class="lb-rank">2</span><span class="lb-avatar" style="background:linear-gradient(135deg,#5CA5FF,#0052FF);">N</span><div class="lb-user">@nova_finds</div><span class="lb-pnl">+$611.4K</span></div>
+              <div class="lb-row"><span class="lb-rank">3</span><span class="lb-avatar" style="background:linear-gradient(135deg,#F0B90B,#FFD866);">D</span><div class="lb-user">@driftking</div><span class="lb-pnl">+$398.7K</span></div>
+              <div class="lb-row faded"><span class="lb-rank">4</span><span class="lb-avatar" style="background:linear-gradient(135deg,#9945FF,#14F195);">F</span><div class="lb-user">@fomo_fam_02</div><span class="lb-pnl">+$310.2K</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feat-tile t-alerts">
+          <span class="feat-tag"><i></i>Alerts</span>
+          <h3>Get pinged the moment a crowd forms</h3>
+          <p class="feat-sub">When several traders you follow buy the same token within minutes, Fomo sends a push.</p>
+          <div class="feat-visual">
+            <div class="toast-stack">
+              <div class="toast back">
+                <div class="toast-icon">◎</div>
+                <div><div class="t-title">SOL is up 3.1%</div><div class="t-sub">12 traders bought $41.0K</div></div>
+              </div>
+              <div class="toast front">
+                <div class="toast-icon">🔥</div>
+                <div><div class="t-title">DOGE is up 5.9%</div><div class="t-sub">50 traders bought $88.2K</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feat-tile t-onboarding">
+          <span class="feat-tag"><i></i>Onboarding</span>
+          <h3>One tap, no seed phrase to write down</h3>
+          <p class="feat-sub">Sign in with an account you already have. Fomo holds the keys so you don't have to.</p>
+          <div class="feat-visual">
+            <div class="oauth-stack">
+              <div class="oauth-btn apple">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.36 1.43c.09 1.1-.34 2.16-1.04 2.93-.72.78-1.9 1.4-3.02 1.31-.11-1.06.4-2.17 1.06-2.9.73-.8 2-1.39 3-1.34zM19.7 17.02c-.35.81-.52 1.17-.97 1.9-.63 1.02-1.52 2.28-2.62 2.29-.98.01-1.23-.64-2.56-.63-1.33 0-1.6.64-2.58.66-1.1.02-1.94-1.16-2.57-2.17-1.76-2.82-1.94-6.14-.86-7.9.77-1.25 1.98-1.98 3.12-1.98 1.16 0 1.89.65 2.85.65.93 0 1.5-.65 2.85-.65.99 0 2.05.55 2.79 1.5-2.46 1.35-2.06 4.86.55 5.83z"/></svg>
+                Continue with Apple
+              </div>
+              <div class="oauth-btn google">
+                <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.99.66-2.25 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.85A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.05H2.18a11 11 0 0 0 0 9.9l3.66-2.85z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1a11 11 0 0 0-9.82 6.05l3.66 2.85C6.71 7.3 9.14 5.38 12 5.38z"/></svg>
+                Continue with Google
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feat-tile t-multichain">
+          <span class="feat-tag"><i></i>Multichain</span>
+          <h3>Trade across chains without bridging</h3>
+          <p class="feat-sub">Balances and gas are handled for you, so a token on another chain is still one tap away.</p>
+          <div class="feat-visual">
+            <div class="chain-stack">
+              <div class="chain-row"><span class="chain-dot" style="background:linear-gradient(135deg,#9945FF,#14F195);">S</span><span>Solana</span><small>Active</small></div>
+              <div class="chain-row"><span class="chain-dot" style="background:linear-gradient(135deg,#0052FF,#5CA5FF);">B</span><span>Base</span><small>Active</small></div>
+              <div class="chain-row"><span class="chain-dot" style="background:linear-gradient(135deg,#F0B90B,#FFD866);">N</span><span>BNB Chain</span><small>Active</small></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feat-tile t-buy">
+          <div class="feat-copy">
+            <span class="feat-tag"><i></i>Funding</span>
+            <h3>Buy in one tap with Apple Pay</h3>
+            <p class="feat-sub">Fund with a card or Apple Pay and your buy fills in seconds — no bank transfer, no waiting on a bridge, no separate gas top-up.</p>
+          </div>
+          <div class="feat-visual">
+            <div class="buy-widget">
+              <div class="buy-amount">$100.00</div>
+              <div class="amt-row">
+                <span class="amt-chip">$25</span>
+                <span class="amt-chip active">$100</span>
+                <span class="amt-chip">$250</span>
+              </div>
+              <div class="pay-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.36 1.43c.09 1.1-.34 2.16-1.04 2.93-.72.78-1.9 1.4-3.02 1.31-.11-1.06.4-2.17 1.06-2.9.73-.8 2-1.39 3-1.34zM19.7 17.02c-.35.81-.52 1.17-.97 1.9-.63 1.02-1.52 2.28-2.62 2.29-.98.01-1.23-.64-2.56-.63-1.33 0-1.6.64-2.58.66-1.1.02-1.94-1.16-2.57-2.17-1.76-2.82-1.94-6.14-.86-7.9.77-1.25 1.98-1.98 3.12-1.98 1.16 0 1.89.65 2.85.65.93 0 1.5-.65 2.85-.65.99 0 2.05.55 2.79 1.5-2.46 1.35-2.06 4.86.55 5.83z"/></svg>Pay — Buy now</div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
